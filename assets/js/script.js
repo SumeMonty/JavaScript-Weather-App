@@ -38,7 +38,7 @@ function displayWeather(data) {
   iconElement.src =
     `https://openweathermap.org/img/wn/${icon}.png`;
   descElement.innerHTML = `${description}`;
-  tempElement.innerHTML = `${temp}<span>°C</span>`;
+  tempElement.innerHTML = `${Math.floor(temp)}<span>°C</span>`;
   humidityElement.innerHTML =
     `Humidity: ${humidity}%`;
   windElement.innerHTML =
