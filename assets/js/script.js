@@ -35,6 +35,7 @@ function displayWeather(data) {
   document.querySelector(".weather").classList.remove("loading");
   document.body.style.backgroundImage =
     "url('https://source.unsplash.com/1600x900/?" + description + " weather" + "')";
+  // document.body.style.backgroundImage = url(`../img/${description}.jpg`);
 }
 
 document.querySelector(".search button").addEventListener("click", function () {
