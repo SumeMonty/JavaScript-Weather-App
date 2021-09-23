@@ -6,8 +6,8 @@ let weather = {
     )
       .then((response) => {
         if (!response.ok) {
-          alert("No weather found.");
-          throw new Error("No weather found.");
+          alert("No weather found at your location.");
+          throw new Error("No weather found at your location.");
         }
         return response.json();
       })
@@ -49,12 +49,44 @@ document
     }
   });
 
-weather.fetchWeather("Mumbai");
+
+//Checking Current Location Of The User
+
+// CHECK IF BROWSER SUPPORTS GEOLOCATION
+if('geolocation' in navigator){
+  navigator.geolocation.getCurrentPosition(setPosition, showError);
+}else{
+  alert("Browser doesn't Support Geolocation");
+}
 
 
 
+// SET USER'S POSITION
+function setPosition(position){
+  let lat = position.coords.latitude;
+  let lng = position.coords.longitude;
+  fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}&localityLanguage=en`)
+    .then((response) => {
+      locationJson = response.json();
+      return locationJson;
+    })
+    .then((locationJson) => detLocation(locationJson));
+}
 
+//Determine USER'S LOCATION
+function detLocation(locationJson) {
+  locationcity = locationJson.locality;
+  initialWeatherCall(locationcity);
+}
 
+// SHOW ERROR WHEN THERE IS AN ISSUE WITH GEOLOCATION SERVICE
+function showError(error){
+  notificationElement.style.display = "block";
+  notificationElement.innerHTML = `<p> ${error.message} </p>`;
+}
+function initialWeatherCall(locationCity) {
+  weather.fetchWeather(locationCity);
+}
 
 
 
