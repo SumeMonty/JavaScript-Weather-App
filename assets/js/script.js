@@ -1,6 +1,7 @@
 const cityElement = document.querySelector(".city");
 const iconElement = document.querySelector(".icon");
 const tempElement = document.querySelector(".temp");
+const tempSpan = document.querySelector(".tempspan");
 const descElement = document.querySelector(".description");
 const humidityElement = document.querySelector(".humidity");
 const windElement = document.querySelector(".wind");
@@ -9,9 +10,10 @@ const searchBtnElement = document.querySelector(".search button");
 const searchBarElement = document.querySelector(".search-bar");
 let weather = {
   apiKey: "98089c814ceb7377bc0bbd0ba68651ec",
+  unitSystem: "metric",
   fetchWeather: function (city) {
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${this.apiKey}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${this.unitSystem}&appid=${this.apiKey}`
     )
       .then((response) => {
         if (!response.ok) {
@@ -38,11 +40,22 @@ function displayWeather(data) {
   iconElement.src =
     `https://openweathermap.org/img/wn/${icon}.png`;
   descElement.innerHTML = `${description}`;
-  tempElement.innerHTML = `${Math.floor(temp)}<span>°C</span>`;
+  if (weather.unitSystem == "metric") {
+    tempElement.innerHTML = `${Math.floor(temp)} <span class="tempspan">°C</span>`;
+  }
+  else if (weather.unitSystem == "imperial") {
+    tempElement.innerHTML = `${Math.floor(temp)} <span class="tempspan">°F</span>`;
+  }
+
   humidityElement.innerHTML =
     `Humidity: ${humidity}%`;
-  windElement.innerHTML =
-    `Wind speed: ${speed} <span>km/h</span>`;
+  if (weather.unitSystem == "metric") {
+    windElement.innerHTML = `Wind speed: ${speed} <span>km/h</span>`;
+  }
+  else if (weather.unitSystem == "imperial") {
+    windElement.innerHTML = `Wind speed: ${speed} <span>mph</span>`;
+  }
+
   weatherElement.classList.remove("loading");
   document.body.style.backgroundImage =
     `url('https://source.unsplash.com/1600x900/?${description} weather')`;
@@ -56,6 +69,7 @@ searchBtnElement.addEventListener("click", function () {
 searchBarElement.addEventListener("keyup", function (event) {
   if (event.key == "Enter") {
     weather.search();
+
   }
 });
 
@@ -98,7 +112,18 @@ function initialWeatherCall(locationCity) {
   weather.fetchWeather(locationCity);
 }
 
+tempElement.addEventListener("click", function () {
+  if (weather.unitSystem === undefined) return;
 
+  if (weather.unitSystem == "metric") {
+    weather.unitSystem = "imperial";
+    weather.fetchWeather(document.querySelector(".search-bar").value);
+  }
+  else if (weather.unitSystem == "imperial") {
+    weather.unitSystem = "metric"
+    weather.fetchWeather(document.querySelector(".search-bar").value);
+  }
+});
 
 
 
