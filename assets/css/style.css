@@ -78,6 +78,10 @@ h1.temp {
   margin-bottom: 0.4em;
 }
 
+h1.temp span:hover {
+  color: #777;
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
