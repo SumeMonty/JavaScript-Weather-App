@@ -13,7 +13,7 @@ body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
   background: #222;
-  background-image: url("https://source.unsplash.com/1600x900/?landscape");
+  background-image: url("https://source.unsplash.com/1600x900/?weather");
   font-size: 120%;
 }
 
@@ -120,5 +120,11 @@ h1.temp {
 
 /****************************WEATHER CONTAINER STYLES END*****************************/
 /****************************MEDIA QUERIES*****************************/
+@media (max-width: 395px) {
+  .weather.loading:after {
+    top: -12px;
+  }
+}
+
 /****************************MEDIA QUERIES*****************************/
 /*# sourceMappingURL=style.css.map */
