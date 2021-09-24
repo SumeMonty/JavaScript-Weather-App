@@ -1,3 +1,4 @@
+/****************************BODY STYLES*****************************/
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10,7 +11,7 @@ body {
           align-items: center;
   height: 100vh;
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   background: #222;
   background-image: url("https://source.unsplash.com/1600x900/?landscape");
   font-size: 120%;
@@ -21,6 +22,8 @@ body {
   transition: background-image 0.2s ease-in-out;
 }
 
+/****************************BODY STYLES END*****************************/
+/****************************CENTER CARD STYLES*****************************/
 .card {
   background: #000000d0;
   color: white;
@@ -31,6 +34,8 @@ body {
   margin: 1em;
 }
 
+/****************************CENTER CARD STYLES END*****************************/
+/****************************WEATHER SEARCH AREA STYLES*****************************/
 .search {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -73,16 +78,15 @@ button:hover {
   background: #7c7c7c6b;
 }
 
+/****************************WEATHER SEARCH AREA STYLES END*****************************/
+/****************************TEMP AREA STYLES*****************************/
 h1.temp {
   margin: 0;
   margin-bottom: 0.4em;
-  cursor: pointer;
 }
 
-h1.temp span:hover {
-  color: #777;
-}
-
+/****************************TEMP AREA STYLES END*****************************/
+/****************************WEATHER DESCRIPTION STYLES*****************************/
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -97,6 +101,8 @@ h1.temp span:hover {
   margin-left: 8px;
 }
 
+/****************************WEATHER DESCRIPTION STYLES END*****************************/
+/****************************WEATHER CONTAINER STYLES*****************************/
 .weather.loading {
   visibility: hidden;
   max-height: 20px;
@@ -111,4 +117,8 @@ h1.temp span:hover {
   top: 0;
   left: 20px;
 }
+
+/****************************WEATHER CONTAINER STYLES END*****************************/
+/****************************MEDIA QUERIES*****************************/
+/****************************MEDIA QUERIES*****************************/
 /*# sourceMappingURL=style.css.map */

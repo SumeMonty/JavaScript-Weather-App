@@ -1,4 +1,5 @@
-$bodybg:url('https://source.unsplash.com/1600x900/?landscape'); 
+/****************************BODY STYLES*****************************/
+$bodybg: url("https://source.unsplash.com/1600x900/?landscape");
 
 body {
   display: flex;
@@ -6,7 +7,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   background: #222;
   background-image: $bodybg;
   font-size: 120%;
@@ -16,6 +17,9 @@ body {
   -webkit-transition: background-image 0.2s ease-in-out;
   transition: background-image 0.2s ease-in-out;
 }
+/****************************BODY STYLES END*****************************/
+
+/****************************CENTER CARD STYLES*****************************/
 
 .card {
   background: #000000d0;
@@ -26,6 +30,9 @@ body {
   max-width: 420px;
   margin: 1em;
 }
+/****************************CENTER CARD STYLES END*****************************/
+
+/****************************WEATHER SEARCH AREA STYLES*****************************/
 
 .search {
   display: flex;
@@ -61,12 +68,16 @@ input.search-bar {
 button:hover {
   background: #7c7c7c6b;
 }
+/****************************WEATHER SEARCH AREA STYLES END*****************************/
 
+/****************************TEMP AREA STYLES*****************************/
 h1.temp {
   margin: 0;
   margin-bottom: 0.4em;
 }
+/****************************TEMP AREA STYLES END*****************************/
 
+/****************************WEATHER DESCRIPTION STYLES*****************************/
 .flex {
   display: flex;
   align-items: center;
@@ -76,7 +87,9 @@ h1.temp {
   text-transform: capitalize;
   margin-left: 8px;
 }
+/****************************WEATHER DESCRIPTION STYLES END*****************************/
 
+/****************************WEATHER CONTAINER STYLES*****************************/
 .weather.loading {
   visibility: hidden;
   max-height: 20px;
@@ -91,3 +104,7 @@ h1.temp {
   top: 0;
   left: 20px;
 }
+/****************************WEATHER CONTAINER STYLES END*****************************/
+
+/****************************MEDIA QUERIES*****************************/
+/****************************MEDIA QUERIES*****************************/
