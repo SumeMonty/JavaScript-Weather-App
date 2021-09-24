@@ -41,10 +41,10 @@ function displayWeather(data) {
     `https://openweathermap.org/img/wn/${icon}.png`;
   descElement.innerHTML = `${description}`;
   if (weather.unitSystem == "metric") {
-    tempElement.innerHTML = `${Math.floor(temp)} <span class="tempspan">°C</span>`;
+    tempElement.innerHTML = `${Math.round(temp)} <span class="tempspan">°C</span>`;
   }
   else if (weather.unitSystem == "imperial") {
-    tempElement.innerHTML = `${Math.floor(temp)} <span class="tempspan">°F</span>`;
+    tempElement.innerHTML = `${Math.round(temp)} <span class="tempspan">°F</span>`;
   }
 
   humidityElement.innerHTML =
