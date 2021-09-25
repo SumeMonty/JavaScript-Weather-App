@@ -9,16 +9,11 @@
 </head>
 
 <body>
-    <input type="text">
+    <input id="citysearch" type="text">
+    <button id ="btnSearch" >click me</button>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places&key=AIzaSyAXnPBECfrcfcgI9xBpAze9_VkRbplmosI"></script>
     <script>
-        var requestOptions = {
-            method: 'GET',
-        };
-
-        fetch("https://api.geoapify.com/v2/places?categories=commercial.supermarket&filter=rect%3A10.716463143326969%2C48.755151258420966%2C10.835314015356737%2C48.680903341613316&limit=20&apiKey=764579521f8141e7a6d1e357c935f48a", requestOptions)
-            .then(response => response.json())
-            .then(result => console.log(result))
-            .catch(error => console.log('error', error));
+new google.maps.places.Autocomplete(document.getElementById("citysearch"));
     </script>
 </body>
 
