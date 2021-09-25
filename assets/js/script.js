@@ -17,7 +17,7 @@ let weather = {
     )
       .then((response) => {
         if (!response.ok) {
-          alert("No weather found at your location.");
+          alert(`No weather found for ${city}`);
           throw new Error("No weather found at your location.");
         }
         return response.json();
@@ -100,6 +100,7 @@ function setPosition(position) {
 //Determine USER'S LOCATION
 function detLocation(locationJson) {
   locationcity = locationJson.locality;
+  // locationcity = "Pune";
   initialWeatherCall(locationcity);
 }
 
@@ -144,3 +145,11 @@ tempElement.addEventListener("click", function () {
 // const key = "98089c814ceb7377bc0bbd0ba68651ec";
 
 // weather.fetchWeather("Mumbai");
+
+/*          if (!(city == null) & ((document.querySelector(".search-bar").value) == null)) {
+            alert(`No weather found for ${city}`);
+          }
+          else if(1)
+          {
+            alert(`Please Enter A Valid Location`);
+          }*/
