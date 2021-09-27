@@ -9,11 +9,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <title>JavaScript Weather App</title>
 </head>
 
 <body>
-  <div class="card">
+  <div data-aos="zoom-in" data-aos-duration="1200" class="card">
     <div class="search">
       <input type="text" class="search-bar" placeholder="Search">
       <button><img src="assets/img/search.svg"></button>
@@ -29,10 +30,14 @@
       <div class="wind">Wind speed: 6.2 <span id="windspan">km/h</span> </div>
     </div>
   </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXnPBECfrcfcgI9xBpAze9_VkRbplmosI&callback=initMap"></script>
   <script src="assets/js/script.js" defer></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
