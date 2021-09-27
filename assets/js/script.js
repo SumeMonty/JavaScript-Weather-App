@@ -118,11 +118,27 @@ tempElement.addEventListener("click", function () {
 
   if (weather.unitSystem == "metric") {
     weather.unitSystem = "imperial";
-    weather.fetchWeather(document.querySelector(".search-bar").value);
+    if (document.querySelector(".search-bar").value != "")
+      weather.fetchWeather(document.querySelector(".search-bar").value);
+    else {
+      if ('geolocation' in navigator) {
+        navigator.geolocation.getCurrentPosition(setPosition, showError);
+      } else {
+        alert("Browser doesn't Support Geolocation");
+      }
+    }
   }
   else if (weather.unitSystem == "imperial") {
     weather.unitSystem = "metric"
-    weather.fetchWeather(document.querySelector(".search-bar").value);
+    if (document.querySelector(".search-bar").value != "")
+      weather.fetchWeather(document.querySelector(".search-bar").value);
+    else {
+      if ('geolocation' in navigator) {
+        navigator.geolocation.getCurrentPosition(setPosition, showError);
+      } else {
+        alert("Browser doesn't Support Geolocation");
+      }
+    }
   }
 });
 
