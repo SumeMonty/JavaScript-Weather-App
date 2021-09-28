@@ -13,8 +13,9 @@ let weather = {
   unitSystem: "metric",
   fetchWeather: function (city) {
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${this.unitSystem}&appid=${this.apiKey}`
+      `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${this.unitSystem}&appid=${this.apiKey}`
     )
+    // .then((response) => {console.log(response.json());});
       .then((response) => {
         if (!response.ok) {
           alert(`No weather found for ${city}`);
@@ -30,12 +31,12 @@ let weather = {
 };
 
 function displayWeather(data) {
-  const name = data.name;
-  const icon = data.weather[0].icon;
-  const description = data.weather[0].description;
-  const temp = data.main.temp;
-  const humidity = data.main.humidity;
-  const speed = data.wind.speed;
+  const name = data.city.name;
+  const icon = data.list[0].weather[0].icon;
+  const description = data.list[0].weather[0].description;
+  const temp = data.list[0].main.temp;
+  const humidity = data.list[0].main.humidity;
+  const speed = data.list[0].wind.speed;
   cityElement.innerHTML = `Weather in ${name}`;
   iconElement.src =
     `https://openweathermap.org/img/wn/${icon}.png`;
@@ -142,6 +143,8 @@ tempElement.addEventListener("click", function () {
   }
 });
 
+document.querySelector('.card2').style.height=document.querySelector('.card1').style.height;
+document.querySelector('.card2').style.width=document.querySelector('.card1').style.width;
 
 
 
