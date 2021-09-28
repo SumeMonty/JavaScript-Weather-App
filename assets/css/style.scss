@@ -21,13 +21,12 @@ body {
 
 /****************************CENTER CARD1 STYLES*****************************/
 
-
 .card1 {
   background: #000000d0;
   color: white;
   padding: 32px;
   border-radius: 30px;
-  width: 100%;
+  width: 80%;
   max-width: 420px;
   margin: 16px;
 }
@@ -44,6 +43,7 @@ body {
   width: 490px;
   max-width: 420px;
   margin: 16px;
+  display :none;
 }
 
 /****************************THERMOMETER STYLES*****************************/
@@ -55,11 +55,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  left: 300px;
+  left: 250px;
+  bottom: 10px;
   // background-color: #fff;
 }
 
-.card2 .thermometer  .bar {
+.card2 .thermometer .bar {
   z-index: 1;
   position: absolute;
   background-color: #fff;
@@ -69,24 +70,33 @@ body {
   // transform: translateX(-50%);
 }
 
-.card2 .thermometer  .circle {
+.card2 .thermometer .circle {
   background-color: #fff;
   position: absolute;
-  height: 50px;
-  width: 50px;
-  bottom: 0;
+  height: 30px;
+  width: 30px;
+  bottom: 10px;
   border-radius: 50%;
 }
-
+.todayhigh {
+  position: relative;
+  top: -25%;
+  left: -30%;
+}
+.todaylow {
+  position: relative;
+  top: 20%;
+  left: 30%;
+}
 
 /****************************THERMOMETER STYLES END*****************************/
 
-@media (min-width: 1070px){
+@media (min-width: 1070px) {
   body {
-    height:100vh;
+    height: 100vh;
   }
 }
-@media (max-width: 1070px){
+@media (max-width: 1070px) {
   body {
     flex-direction: column;
   }
@@ -139,8 +149,7 @@ h1.temp {
   cursor: pointer;
 }
 
-h1.temp:hover
-{
+h1.temp:hover {
   color: #a8a7a7;
 }
 /****************************TEMP AREA STYLES END*****************************/
@@ -175,7 +184,7 @@ h1.temp:hover
 /****************************WEATHER CONTAINER STYLES END*****************************/
 
 /****************************MEDIA QUERIES*****************************/
-@media(max-width:395px){
+@media (max-width: 395px) {
   .weather.loading:after {
     top: -12px;
   }

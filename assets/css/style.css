@@ -29,7 +29,7 @@ body {
   color: white;
   padding: 32px;
   border-radius: 30px;
-  width: 100%;
+  width: 80%;
   max-width: 420px;
   margin: 16px;
 }
@@ -45,6 +45,7 @@ body {
   width: 490px;
   max-width: 420px;
   margin: 16px;
+  display: none;
 }
 
 /****************************THERMOMETER STYLES*****************************/
@@ -61,7 +62,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  left: 300px;
+  left: 250px;
+  bottom: 10px;
 }
 
 .card2 .thermometer .bar {
@@ -76,10 +78,22 @@ body {
 .card2 .thermometer .circle {
   background-color: #fff;
   position: absolute;
-  height: 50px;
-  width: 50px;
-  bottom: 0;
+  height: 30px;
+  width: 30px;
+  bottom: 10px;
   border-radius: 50%;
+}
+
+.todayhigh {
+  position: relative;
+  top: -25%;
+  left: -30%;
+}
+
+.todaylow {
+  position: relative;
+  top: 20%;
+  left: 30%;
 }
 
 /****************************THERMOMETER STYLES END*****************************/
