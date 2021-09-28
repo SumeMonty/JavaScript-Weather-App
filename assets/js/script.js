@@ -56,7 +56,7 @@ function displayWeather(data) {
   else if (weather.unitSystem == "imperial") {
     windElement.innerHTML = `Wind speed: ${speed} <span>mph</span>`;
   }
-
+  
   weatherElement.classList.remove("loading");
   document.body.style.backgroundImage =
     `url('https://source.unsplash.com/1600x900/?${description} weather')`;
@@ -142,9 +142,6 @@ tempElement.addEventListener("click", function () {
     }
   }
 });
-
-document.querySelector('.card2').style.height=document.querySelector('.card1').style.height;
-document.querySelector('.card2').style.width=document.querySelector('.card1').style.width;
 
 
 
