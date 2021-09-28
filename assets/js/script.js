@@ -35,6 +35,8 @@ function displayWeather(data) {
   const icon = data.list[0].weather[0].icon;
   const description = data.list[0].weather[0].description;
   const temp = data.list[0].main.temp;
+  const todayhigh = data.list[0].main.temp_min;
+  const todaylow = data.list[0].main.temp_max;
   const humidity = data.list[0].main.humidity;
   const speed = data.list[0].wind.speed;
   cityElement.innerHTML = `Weather in ${name}`;
@@ -56,7 +58,9 @@ function displayWeather(data) {
   else if (weather.unitSystem == "imperial") {
     windElement.innerHTML = `Wind speed: ${speed} <span>mph</span>`;
   }
-  
+  document.querySelector('.todayhigh').innerHTML = `Today High - ${todayhigh}`;
+  document.querySelector('.todaylow').innerHTML = `Today Low - ${todaylow}`;
+  document.querySelector('.card2').style.display = 'block';
   weatherElement.classList.remove("loading");
   document.body.style.backgroundImage =
     `url('https://source.unsplash.com/1600x900/?${description} weather')`;
