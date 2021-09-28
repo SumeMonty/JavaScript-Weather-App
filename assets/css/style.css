@@ -37,6 +37,7 @@ body {
 /****************************CENTER CARD1 STYLES END*****************************/
 /****************************CENTER CARD2 STYLES*****************************/
 .card2 {
+  position: none;
   background: #000000d0;
   color: white;
   padding: 2em;
@@ -45,11 +46,10 @@ body {
   width: 490px;
   max-width: 420px;
   margin: 1em;
-  display: none;
 }
 
 /****************************THERMOMETER STYLES*****************************/
-.thermometer {
+.card2 .thermometer {
   position: relative;
   height: 100%;
   width: 20%;
@@ -65,7 +65,7 @@ body {
   left: 300px;
 }
 
-.bar {
+.card2 .thermometer .bar {
   z-index: 1;
   position: absolute;
   background-color: #fff;
@@ -74,7 +74,7 @@ body {
   border-radius: 25px 25px 0 0;
 }
 
-.circle {
+.card2 .thermometer .circle {
   background-color: #fff;
   position: absolute;
   height: 50px;
