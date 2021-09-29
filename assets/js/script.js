@@ -45,9 +45,13 @@ function displayWeather(data) {
   descElement.innerHTML = `${description}`;
   if (weather.unitSystem == "metric") {
     tempElement.innerHTML = `${Math.round(temp)} <span class="tempspan">°C</span>`;
+    document.querySelector('.todayhigh').innerHTML = `Today High - ${todayhigh} °C`;
+    document.querySelector('.todaylow').innerHTML = `Today Low - ${todaylow} °C`;
   }
   else if (weather.unitSystem == "imperial") {
     tempElement.innerHTML = `${Math.round(temp)} <span class="tempspan">°F</span>`;
+    document.querySelector('.todayhigh').innerHTML = `Today High - ${todayhigh} °F`;
+    document.querySelector('.todaylow').innerHTML = `Today Low - ${todaylow} °F`;
   }
 
   humidityElement.innerHTML =
@@ -58,9 +62,8 @@ function displayWeather(data) {
   else if (weather.unitSystem == "imperial") {
     windElement.innerHTML = `Wind speed: ${speed} <span>mph</span>`;
   }
-  document.querySelector('.todayhigh').innerHTML = `Today High - ${todayhigh}`;
-  document.querySelector('.todaylow').innerHTML = `Today Low - ${todaylow}`;
-  document.querySelector('.card2').style.display = 'block';
+
+  // document.querySelector('.card2').style.display = 'block';
   weatherElement.classList.remove("loading");
   document.body.style.backgroundImage =
     `url('https://source.unsplash.com/1600x900/?${description} weather')`;
