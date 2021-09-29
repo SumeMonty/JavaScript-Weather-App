@@ -40,7 +40,8 @@ body {
   padding: 32px;
   border-radius: 30px;
   height: 315px;
-  width: 490px;
+  // width: 490px;
+  width: 80%;
   max-width: 420px;
   margin: 16px;
   display :none;
@@ -57,7 +58,6 @@ body {
   align-items: center;
   left: 170px;
   bottom: 10px;
-  // background-color: #fff;
 }
 
 .card2 .thermometer .bar {
@@ -67,7 +67,6 @@ body {
   height: 80%;
   width: 15%;
   border-radius: 25px 25px 0 0;
-  // transform: translateX(-50%);
 }
 
 .card2 .thermometer .circle {
