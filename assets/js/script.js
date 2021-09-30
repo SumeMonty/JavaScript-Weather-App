@@ -11,9 +11,8 @@ const searchBarElement = document.querySelector(".search-bar");
 let weather = {
   apiKey: "98089c814ceb7377bc0bbd0ba68651ec",
   unitSystem: "metric",
-  fetchWeather: function (city) {
-    fetch(
-      `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${this.unitSystem}&appid=${this.apiKey}`
+  fetchWeather: async function (city) {
+    await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${this.unitSystem}&appid=${this.apiKey}`
     )
     // .then((response) => {console.log(response.json());});
       .then((response) => {
