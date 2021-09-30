@@ -1,4 +1,8 @@
 # JavaScript-Weather-App
  Simple JavaScript Weather App
 
-<video src="Readme-Assets/JavaScript-Weather-App.mkv" muted></video>
+
+
+https://user-images.githubusercontent.com/80830020/135454678-ba703300-fd54-4b7c-bb18-cbc3da5d8f6f.mp4
+
+<!-- ![JavaScript-Weather-App](https://user-images.githubusercontent.com/80830020/135455243-ce21b98f-f7c4-48b2-943e-c77dff2cc9f1.gif) -->
