@@ -14,7 +14,7 @@ let weather = {
   fetchWeather: async function (city) {
     await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${this.unitSystem}&appid=${this.apiKey}`
     )
-    // .then((response) => {console.log(response.json());});
+      // .then((response) => {console.log(response.json());});
       .then((response) => {
         if (!response.ok) {
           alert(`No weather found for ${city}`);
@@ -44,13 +44,13 @@ function displayWeather(data) {
   descElement.innerHTML = `${description}`;
   if (weather.unitSystem == "metric") {
     tempElement.innerHTML = `${Math.round(temp)} <span class="tempspan">°C</span>`;
-    document.querySelector('.todayhigh').innerHTML = `Today High - ${todayhigh} °C`;
-    document.querySelector('.todaylow').innerHTML = `Today Low - ${todaylow} °C`;
+    document.querySelector('.todayhigh').innerHTML = `Max ${todayhigh}°C`;
+    document.querySelector('.todaylow').innerHTML = `Min ${todaylow}°C`;
   }
   else if (weather.unitSystem == "imperial") {
     tempElement.innerHTML = `${Math.round(temp)} <span class="tempspan">°F</span>`;
-    document.querySelector('.todayhigh').innerHTML = `Today High - ${todayhigh} °F`;
-    document.querySelector('.todaylow').innerHTML = `Today Low - ${todaylow} °F`;
+    document.querySelector('.todayhigh').innerHTML = `Max ${todayhigh}°F`;
+    document.querySelector('.todaylow').innerHTML = `Min ${todaylow}°F`;
   }
 
   humidityElement.innerHTML =
@@ -62,11 +62,17 @@ function displayWeather(data) {
     windElement.innerHTML = `Wind speed: ${speed} <span>mph</span>`;
   }
 
-  // document.querySelector('.card2').style.display = 'block';
+
+
   weatherElement.classList.remove("loading");
   document.body.style.backgroundImage =
     `url('https://source.unsplash.com/1600x900/?${description} weather')`;
   // document.body.style.backgroundImage = url(`../img/${description}.jpg`);
+  // setmaxmin(todayhigh,todaylow);
+  setTimeout(() => {
+    document.querySelector('.card1').style.position = 'static';
+    document.querySelector('.card2').style.visibility = 'visible';
+  },500);
 }
 
 searchBtnElement.addEventListener("click", function () {
@@ -89,7 +95,6 @@ if ('geolocation' in navigator) {
 } else {
   alert("Browser doesn't Support Geolocation");
 }
-
 
 
 // SET USER'S POSITION
