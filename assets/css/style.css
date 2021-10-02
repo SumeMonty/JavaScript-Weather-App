@@ -45,8 +45,17 @@ body {
   color: white;
   padding: 32px;
   border-radius: 30px;
-  height: 315px;
-  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 295px;
+  width: 80%;
   max-width: 420px;
   margin: 16px;
   -webkit-transition: visibility 0.4s ease-in-out;
@@ -68,26 +77,61 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  left: 170px;
   bottom: 10px;
 }
 
-.card2 .thermometer .bar {
+.bar {
   z-index: 1;
   position: absolute;
   background-color: #fff;
-  height: 230px;
-  width: 15px;
+  height: 220px;
+  width: 30px;
+  top: 5px;
+  left: 50%;
   border-radius: 25px 25px 0 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
-.card2 .thermometer .circle {
+.circle {
   background-color: #fff;
   position: absolute;
-  height: 35px;
-  width: 35px;
-  bottom: 6px;
+  height: 80px;
+  width: 80px;
+  bottom: 0;
   border-radius: 50%;
+}
+
+.circle::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  background-color: #ff0000;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.bar::after {
+  content: "";
+  display: block;
+  height: 80%;
+  width: 16px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: -22px;
+  border-radius: 10px 10px 0 0;
+  background-color: #ff0000;
+  -webkit-animation: anim 2s linear infinite;
+          animation: anim 2s linear infinite;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
 }
 
 .todayhigh {
@@ -99,7 +143,7 @@ body {
 
 .todaylow {
   position: relative;
-  top: 20%;
+  top: 12%;
   left: 30%;
   margin-left: 55%;
 }
@@ -121,8 +165,11 @@ body {
 }
 
 @media (max-width: 430px) {
-  .card2 .thermometer {
-    left: 100px;
+  .todayhigh {
+    margin-right: 10%;
+  }
+  .todaylow {
+    margin-left: 55%;
   }
 }
 
