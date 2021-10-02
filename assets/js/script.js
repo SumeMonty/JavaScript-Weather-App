@@ -34,8 +34,8 @@ function displayWeather(data) {
   const icon = data.list[0].weather[0].icon;
   const description = data.list[0].weather[0].description;
   const temp = data.list[0].main.temp;
-  const todayhigh = data.list[0].main.temp_min;
-  const todaylow = data.list[0].main.temp_max;
+  const todayhigh = data.list[0].main.temp_max;
+  const todaylow = data.list[0].main.temp_min;
   const humidity = data.list[0].main.humidity;
   const speed = data.list[0].wind.speed;
   cityElement.innerHTML = `Weather in ${name}`;
