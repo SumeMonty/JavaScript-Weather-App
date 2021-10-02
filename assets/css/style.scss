@@ -1,4 +1,5 @@
 /****************************BODY STYLES*****************************/
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:regular,italic,700,700italic);
 $bodybg: url("https://source.unsplash.com/1600x900/?weather");
 
 body {
@@ -7,7 +8,7 @@ body {
   align-items: center;
   margin: 0;
   overflow: auto;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   background: #222;
   background-image: $bodybg;
   font-size: 120%;
@@ -44,6 +45,7 @@ body {
   height: 315px;
   // width: 490px;
   width: 80%;
+  // min-width: 420px;
   max-width: 420px;
   margin: 16px;
   transition:visibility 0.4s ease-in-out;
@@ -68,28 +70,30 @@ body {
   z-index: 1;
   position: absolute;
   background-color: #fff;
-  height: 250px;
-  width: 25px;
+  height: 230px;
+  width: 15px;
   border-radius: 25px 25px 0 0;
 }
 
 .card2 .thermometer .circle {
   background-color: #fff;
   position: absolute;
-  height: 60px;
-  width: 60px;
-  bottom: 10px;
+  height: 35px;
+  width: 35px;
+  bottom: 6px;
   border-radius: 50%;
 }
 .todayhigh {
   position: relative;
   top: -25%;
   left: -30%;
+  margin-right:10% ;
 }
 .todaylow {
   position: relative;
   top: 20%;
   left: 30%;
+  margin-left:55% ;
 }
 
 /****************************THERMOMETER STYLES END*****************************/
@@ -102,6 +106,11 @@ body {
 @media (max-width: 1070px) {
   body {
     flex-direction: column;
+  }
+}
+@media (max-width:430px) {
+  .card2 .thermometer{
+    left: 100px;
   }
 }
 
