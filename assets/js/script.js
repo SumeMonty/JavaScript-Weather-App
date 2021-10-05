@@ -8,6 +8,8 @@ const windElement = document.querySelector(".wind");
 const weatherElement = document.querySelector(".weather");
 const searchBtnElement = document.querySelector(".search button");
 const searchBarElement = document.querySelector(".search-bar");
+
+//WEATHER OBJECT ENCLOSING EVERY API DETAILS
 let weather = {
   apiKey: "98089c814ceb7377bc0bbd0ba68651ec",
   unitSystem: "metric",
@@ -29,6 +31,7 @@ let weather = {
   },
 };
 
+//DISPLAYWEATHER FUNCTION TO DISPLAY THE WEATHER DATA AND OTHER DETAILS
 function displayWeather(data) {
   const name = data.city.name;
   const icon = data.list[0].weather[0].icon;
@@ -72,13 +75,15 @@ function displayWeather(data) {
   setTimeout(() => {
     document.querySelector('.card1').style.position = 'static';
     document.querySelector('.card2').style.visibility = 'visible';
-  },500);
+  }, 500);
 }
 
+//
 searchBtnElement.addEventListener("click", function () {
   weather.search();
 });
 
+//
 searchBarElement.addEventListener("keyup", function (event) {
   if (event.key == "Enter") {
     weather.search();
@@ -103,7 +108,7 @@ function setPosition(position) {
   let lng = position.coords.longitude;
   fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}&localityLanguage=en`)
     .then((response) => {
-      locationJson = response.json();
+      let locationJson = response.json();
       return locationJson;
     })
     .then((locationJson) => detLocation(locationJson));
@@ -124,6 +129,28 @@ function showError(error) {
 function initialWeatherCall(locationCity) {
   weather.fetchWeather(locationCity);
 }
+
+import cityArray from './cities.js';
+console.log(cityArray);
+$("#autocomplete").autocomplete({
+  /* source: ["c++", "java", "php", "sumemonty", "javascript", "asp", "ruby"] */
+  source: function (request, response) {
+    var results = $.ui.autocomplete.filter(cityArray, request.term);
+
+    response(results.slice(0, 5));
+  },
+  delay:100
+});
+// $("#autocomplete").autocomplete({
+//   /* source: ["c++", "java", "php", "sumemonty", "javascript", "asp", "ruby"] */
+//   source: function (request, response) {
+//     var results = $.ui.autocomplete.filter(cityArray, request.term);
+
+//     response(results.slice(0, 5));
+//   },
+//   delay:100
+// });
+
 
 tempElement.addEventListener("click", function () {
   if (weather.unitSystem === undefined) return;
