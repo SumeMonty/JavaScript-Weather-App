@@ -116,7 +116,7 @@ function setPosition(position) {
 
 //Determine USER'S LOCATION
 function detLocation(locationJson) {
-  locationcity = locationJson.locality;
+  let locationcity = locationJson.locality;
   // locationcity = "Pune";
   initialWeatherCall(locationcity);
 }
