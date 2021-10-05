@@ -1,7 +1,7 @@
 const cityElement = document.querySelector(".city");
 const iconElement = document.querySelector(".icon");
 const tempElement = document.querySelector(".temp");
-const tempSpan = document.querySelector(".tempspan");
+// const tempSpan = document.querySelector(".tempspan");
 const descElement = document.querySelector(".description");
 const humidityElement = document.querySelector(".humidity");
 const windElement = document.querySelector(".wind");
@@ -140,17 +140,10 @@ $("#autocomplete").autocomplete({
 
     response(results.slice(0, 5));
   },
-  delay:100
+  delay:100,
+  minLength:2,
+  autoFocus:true
 });
-// $("#autocomplete").autocomplete({
-//   /* source: ["c++", "java", "php", "sumemonty", "javascript", "asp", "ruby"] */
-//   source: function (request, response) {
-//     var results = $.ui.autocomplete.filter(cityArray, request.term);
-
-//     response(results.slice(0, 5));
-//   },
-//   delay:100
-// });
 
 
 tempElement.addEventListener("click", function () {
