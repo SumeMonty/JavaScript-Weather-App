@@ -1,6 +1,7 @@
 <div align=center>
  
 # JavaScript-Weather-App
+
 ### Simple JavaScript Weather App
  
 [![License](https://badgen.net/github/license/SumeMonty/JavaScript-Weather-App)](LICENSE) [![Gitter](https://badges.gitter.im/JavaScript-Weather-App/community.svg)](https://gitter.im/JavaScript-Weather-App/community) [![Stars](https://badgen.net/github/stars/SumeMonty/JavaScript-Weather-App)](../../stargazers) [![Opened Issues](https://badgen.net/github/open-issues/SumeMonty/JavaScript-Weather-App)](../../issues?q=is%3Aopen)
