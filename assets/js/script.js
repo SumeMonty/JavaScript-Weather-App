@@ -132,7 +132,6 @@ function initialWeatherCall(locationCity) {
 }
 
 import cityArray from './cities.js';
-console.log(cityArray);
 $("#autocomplete").autocomplete({
   /* source: ["c++", "java", "php", "sumemonty", "javascript", "asp", "ruby"] */
   source: function (request, response) {
