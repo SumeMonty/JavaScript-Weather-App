@@ -20,7 +20,8 @@ let weather = {
       .then((response) => {
         if (!response.ok) {
           alert(`No weather found for ${city}`);
-          throw new Error("No weather found at your location.");
+          // throw new Error("No weather found at your location.");
+          console.log("No weather found at your location");
         }
         return response.json();
       })
