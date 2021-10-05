@@ -1,4 +1,4 @@
-[
+var cityArray = [
    "Tokyo",
    "Jakarta",
    "Delhi",
@@ -41000,4 +41000,8 @@
    "Nord",
    "Timmiarmiut",
    "Nordvik"
-]
+];
+
+
+
+export default cityArray;
