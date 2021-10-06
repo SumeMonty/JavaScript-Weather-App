@@ -1,6 +1,6 @@
 <div align=center>
  
-# JavaScript-Weather-App
+# 📈 JavaScript-Weather-App
 
 ### Simple JavaScript Weather App
  
