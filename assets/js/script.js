@@ -58,7 +58,7 @@ function displayWeather(data) {
       $('.bar').removeClass('red');
       $('.bar').removeClass('green');
       $('.bar').addClass('blue');
-    }
+    } 
     if (todayhigh >= 31 && todayhigh <=70) {
       $('.circle').removeClass('blue');
       $('.circle').removeClass('red');
