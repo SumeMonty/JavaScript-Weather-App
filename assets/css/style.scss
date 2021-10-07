@@ -102,15 +102,15 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.circle.red::after{
-  background-color: rgb(255, 0, 0);
-}
-.circle.blue::after{
-  background-color: rgb(0, 0, 255);
-}
-.circle.green::after{
-  background-color: rgb(0,255,0);
-}
+// .circle.red::after{
+//   background-color: rgb(255, 0, 0);
+// }
+// .circle.blue::after{
+//   background-color: rgb(0, 0, 255);
+// }
+// .circle.green::after{
+//   background-color: rgb(0,255,0);
+// }
 
 .bar::after {
   content: "";
@@ -126,15 +126,15 @@ body {
   animation: anim 2s linear infinite;
   animation-iteration-count: 2;
 }
-.bar.red::after{
-  background-color: rgb(255, 0, 0);
-}
-.bar.blue::after{
-  background-color: rgb(0, 0, 255);
-}
-.bar.green::after{
-  background-color: rgb(0,255,0);
-}
+// .bar.red::after{
+//   background-color: rgb(255, 0, 0);
+// }
+// .bar.blue::after{
+//   background-color: rgb(0, 0, 255);
+// }
+// .bar.green::after{
+//   background-color: rgb(0,255,0);
+// }
 .todayhigh {
   position: relative;
   top: -25%;
