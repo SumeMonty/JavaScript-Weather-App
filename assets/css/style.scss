@@ -68,52 +68,6 @@ body {
   bottom: 10px;
 }
 
-// .card2 .thermometer .bar {
-//   z-index: 1;
-//   position: absolute;
-//   background-color: #fff;
-//   top: -10px;
-//   height: 250px;
-//   width: 25px;
-//   border-radius: 25px 25px 0 0;
-// }
-
-// .card2 .thermometer .circle {
-//   background-color: #fff;
-//   position: absolute;
-//   height: 60px;
-//   width: 60px;
-//   bottom: 10px;
-//   border-radius: 50%;
-// }
-// .circle::after {
-//   content: "";
-//   display: block;
-//   position: absolute;
-//   height: 40px;
-//   width: 40px;
-//   border-radius: 50%;
-//   left: 50%;
-//   top: 50%;
-//   background-color: #ff0000;
-//   transform: translate(-50%, -50%);
-// }
-
-// .bar::after {
-//   content: "";
-//   display: block;
-//   height: 200px;
-//   width: 18px;
-//   position: absolute;
-//   left: 50%;
-//   transform: translateX(-50%);
-//   top: 20px;
-//   border-radius: 10px 10px 0 0;
-//   background-color: #ff0000;
-//   animation: anim 2s linear infinite;
-//   animation-iteration-count: 2;
-// }
-
 .bar {
   z-index: 1;
   position: absolute;
@@ -148,6 +102,16 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.circle.red::after{
+  background-color: rgb(255, 0, 0);
+}
+.circle.blue::after{
+  background-color: rgb(0, 0, 255);
+}
+.circle.green::after{
+  background-color: rgb(0,255,0);
+}
+
 .bar::after {
   content: "";
   display: block;
@@ -161,6 +125,15 @@ body {
   background-color: #ff0000;
   animation: anim 2s linear infinite;
   animation-iteration-count: 2;
+}
+.bar.red::after{
+  background-color: rgb(255, 0, 0);
+}
+.bar.blue::after{
+  background-color: rgb(0, 0, 255);
+}
+.bar.green::after{
+  background-color: rgb(0,255,0);
 }
 .todayhigh {
   position: relative;

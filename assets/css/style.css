@@ -116,6 +116,18 @@ body {
           transform: translate(-50%, -50%);
 }
 
+.circle.red::after {
+  background-color: red;
+}
+
+.circle.blue::after {
+  background-color: blue;
+}
+
+.circle.green::after {
+  background-color: lime;
+}
+
 .bar::after {
   content: "";
   display: block;
@@ -132,6 +144,18 @@ body {
           animation: anim 2s linear infinite;
   -webkit-animation-iteration-count: 2;
           animation-iteration-count: 2;
+}
+
+.bar.red::after {
+  background-color: red;
+}
+
+.bar.blue::after {
+  background-color: blue;
+}
+
+.bar.green::after {
+  background-color: lime;
 }
 
 .todayhigh {
