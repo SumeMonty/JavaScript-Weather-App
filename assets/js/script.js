@@ -51,6 +51,30 @@ function displayWeather(data) {
     tempElement.innerHTML = `${Math.round(temp)} <span class="tempspan">°C</span>`;
     document.querySelector('.todayhigh').innerHTML = `Max ${todayhigh}°C`;
     document.querySelector('.todaylow').innerHTML = `Min ${todaylow}°C`;
+    if (todayhigh >= 0 && todayhigh <=30) {
+      $('.circle').removeClass('red');
+      $('.circle').removeClass('green');
+      $('.circle').addClass('blue');
+      $('.bar').removeClass('red');
+      $('.bar').removeClass('green');
+      $('.bar').addClass('blue');
+    }
+    if (todayhigh >= 31 && todayhigh <=70) {
+      $('.circle').removeClass('blue');
+      $('.circle').removeClass('red');
+      $('.circle').addClass('green');
+      $('.bar').removeClass('blue');
+      $('.bar').removeClass('red');
+      $('.bar').addClass('green');
+    }
+    if (todayhigh >= 71 && todayhigh <=100) {
+      $('.circle').removeClass('blue');
+      $('.circle').removeClass('green');
+      $('.circle').addClass('red');
+      $('.bar').removeClass('blue');
+      $('.bar').removeClass('green');
+      $('.bar').addClass('red');
+    }
   }
   else if (weather.unitSystem == "imperial") {
     tempElement.innerHTML = `${Math.round(temp)} <span class="tempspan">°F</span>`;
