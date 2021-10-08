@@ -2,5 +2,4 @@ var cityArray = ["Tokyo", "Jakarta", "Delhi", "Mumbai", "Manila", "Shanghai", "S
 ];
 
 
-
 export default cityArray;
