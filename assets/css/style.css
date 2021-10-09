@@ -1,6 +1,14 @@
 /****************************BODY STYLES*****************************/
 @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:regular,italic,700,700italic);
 body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Ubuntu", sans-serif;
+  background: #222;
+  font-size: 120%;
+}
+
+.homePage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10,12 +18,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0;
-  overflow: auto;
-  font-family: "Ubuntu", sans-serif;
-  background: #222;
   background-image: url("https://source.unsplash.com/1600x900/?weather");
-  font-size: 120%;
+  height: 100vh;
+  width: 100vw;
+}
+
+.forecastPage {
+  background-image: url("https://source.unsplash.com/1600x900/?weather");
+  height: 100vh;
+  width: 100vw;
 }
 
 body {
@@ -149,14 +160,8 @@ body {
 }
 
 /****************************THERMOMETER STYLES END*****************************/
-@media (min-width: 1070px) {
-  body {
-    height: 100vh;
-  }
-}
-
 @media (max-width: 1070px) {
-  body {
+  .homePagePage {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
