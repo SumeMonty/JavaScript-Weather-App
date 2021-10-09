@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,49 +8,63 @@
   <link rel="icon" href="assets/img/weather_icon.jpg">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <!-- Open Graph Meta Tages -->
   <meta property="og:url" content="https://sumemonty.github.io/JavaScript-Weather-App/" />
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="JavaScript Weather App" />
-    <meta property="og:description"
-        content="Get The Weather Data For More Than 9,000 Cities In The World." />
-    <meta property="og:image" content="https://raw.githubusercontent.com/SumeMonty/JavaScript-Weather-App/master/assets/img/weather_icon.jpg" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="512" />
-    <meta property="og:image:height" content="512" />
-    <meta property="og:site_name" content="Online Weather App">
-    <meta property="fb:app_id" content="123456789">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="JavaScript Weather App" />
+  <meta property="og:description" content="Get The Weather Data For More Than 9,000 Cities In The World." />
+  <meta property="og:image"
+    content="https://raw.githubusercontent.com/SumeMonty/JavaScript-Weather-App/master/assets/img/weather_icon.jpg" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:height" content="512" />
+  <meta property="og:site_name" content="Online Weather App">
+  <meta property="fb:app_id" content="123456789">
+  <!-- Open Graph Meta Tages -->
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <!-- <link rel="stylesheet" href="assets/css/forecast.css"> -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <title>JavaScript Weather App</title>
 </head>
 
 <body>
-  <div data-aos="zoom-in" data-aos-duration="1200" class="card1">
-    <div class="search">
-      <input type="text" id="autocomplete" class="search-bar" placeholder="Search" autofocus>
-      <button><img src="assets/img/search.svg"></button>
-    </div>
-    <div class="weather loading">
-      <h2 class="city">Weather in Mumbai</h2>
-      <h1 class="temp">27 <span class="tempspan">°C</span></h1>
-      <div class="flex">
-        <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
-        <div class="description">Cloudy</div>
+  <div class="homePage">
+    <div data-aos="zoom-in" data-aos-duration="1200" class="card1">
+      <div class="search">
+        <input type="text" id="autocomplete" class="search-bar" placeholder="Search" autofocus>
+        <button><img src="assets/img/search.svg"></button>
       </div>
-      <div class="humidity">Humidity: 60%</div>
-      <div class="wind">Wind speed: 6.2 <span id="windspan">km/h</span> </div>
+      <div class="weather loading">
+        <h2 class="city">Weather in Mumbai</h2>
+        <h1 class="temp">27 <span class="tempspan">°C</span></h1>
+        <div class="flex">
+          <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
+          <div class="description">Cloudy</div>
+        </div>
+        <div class="humidity">Humidity: 60%</div>
+        <div class="wind">Wind speed: 6.2 <span id="windspan">km/h</span> </div>
+      </div>
     </div>
-  </div>
-  <div data-aos="zoom-in" data-aos-duration="1200" class="card2">
-    <div class="thermometer">
-      <h3 class="todayhigh">Max 27.8</h3>
-      <h3 class="todaylow">Min 27.2</h3>
+    <!-- <a href="Forecast/index.html"><input type="button" id="forecastbtn" onclick="loadForecastPage()" value=""></a>
+    <script type="text/javascript">
+      function loadForecastPage() {
+        window.location = 'Forecast/index.html';
+      }
+    </script> -->
 
-      <div class="bar"></div>
-      <div class="circle"></div>
+    <div data-aos="zoom-in" data-aos-duration="1200" class="card2">
+      <div class="thermometer">
+        <h3 class="todayhigh">Max 27.8</h3>
+        <h3 class="todaylow">Min 27.2</h3>
+
+        <div class="bar"></div>
+        <div class="circle"></div>
+      </div>
     </div>
   </div>
+
+
   <!-- //Animate On Scroll JS Animation Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <!-- JQuery Script -->
@@ -60,6 +74,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
   <!-- Main Scrip For Webpages -->
   <script type="module" src="assets/js/script.js" defer></script>
+  <!-- <script src="assets/js/forecast.js" ></script> -->
   <!-- JQuery-UI-API Script -->
   <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <!-- Animate On Scroll JS Animation Initialization Script -->
