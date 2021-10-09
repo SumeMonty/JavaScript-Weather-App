@@ -1,0 +1,60 @@
+body {
+    background-color: #e9edf4;
+}
+
+*:focus {
+    outline: none;
+}
+
+.container {
+    background-color: #fff;
+    /*hsla(151, 67%, 57%, 0.2)*/
+    margin-top: 1%;
+    height: 95%;
+    width: 80%;
+    padding-left: 20px;
+}
+
+#myChart {
+    height: 30%;
+    width: 70%;
+}
+
+.div-btn {
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#btn-bar {
+    margin-top: 15px;
+    margin-left: 15px;
+    padding-right: 15px;
+    font-size: 20px;
+}
+
+#btn-line {
+    margin-top: 15px;
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+#btn-home {
+    margin-top: 15px;
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+@media all and (max-width: 900px) {
+    .container {
+        margin-top: 10%;
+        height: 75%;
+    }
+
+    #myChart {
+        margin-top: 20%;
+        height: 50%;
+        width: 70%;
+        padding-left: 0;
+    }
+}
