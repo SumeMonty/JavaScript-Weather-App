@@ -1,0 +1,137 @@
+{
+    "stock_prices": [
+        {
+            "last_price": 170.33,
+            "last_time": "2021-08-23T17:02:10.166Z",
+            "last_size": 21,
+            "bid_price": 0.0,
+            "bid_size": 0,
+            "ask_price": 0.0,
+            "ask_size": 0,
+            "open_price": 169.525,
+            "close_price": 0.0,
+            "high_price": 170.55,
+            "low_price": 168.13,
+            "exchange_volume": 78833,
+            "market_volume": null,
+            "updated_on": "2021-08-23T17:02:30.050Z",
+            "source": "iex",
+            "security": {
+                "id": "sec_NX6GzO",
+                "ticker": "A",
+                "exchange_ticker": "A:UN",
+                "figi": "BBG000C2V541",
+                "composite_figi": "BBG000C2V3D6"
+            }
+        },
+        {
+            "last_price": 170.13,
+            "last_time": "2021-08-23T16:47:29.000Z",
+            "last_size": null,
+            "bid_price": 169.99,
+            "bid_size": 30,
+            "ask_price": 170.13,
+            "ask_size": 8,
+            "open_price": 169.49,
+            "close_price": null,
+            "high_price": 170.73,
+            "low_price": 105.24,
+            "exchange_volume": 35834,
+            "market_volume": null,
+            "updated_on": "2021-08-23T17:02:29.787Z",
+            "source": "bats_delayed",
+            "security": {
+                "id": "sec_NX6GzO",
+                "ticker": "A",
+                "exchange_ticker": "A:UN",
+                "figi": "BBG000C2V541",
+                "composite_figi": "BBG000C2V3D6"
+            }
+        },
+        {
+            "last_price": 41.265,
+            "last_time": "2021-08-23T17:01:48.867Z",
+            "last_size": 100,
+            "bid_price": 41.26,
+            "bid_size": 400,
+            "ask_price": 42.86,
+            "ask_size": 100,
+            "open_price": 38.34,
+            "close_price": 0.0,
+            "high_price": 41.265,
+            "low_price": 38.34,
+            "exchange_volume": 95957,
+            "market_volume": null,
+            "updated_on": "2021-08-23T17:01:49.422Z",
+            "source": "iex",
+            "security": {
+                "id": "sec_2zvNzA",
+                "ticker": "AA",
+                "exchange_ticker": "AA:UN",
+                "figi": "BBG00B3T3HK5",
+                "composite_figi": "BBG00B3T3HD3"
+            }
+        },
+        {
+            "last_price": 41.09,
+            "last_time": "2021-08-23T16:47:29.000Z",
+            "last_size": null,
+            "bid_price": 41.08,
+            "bid_size": 200,
+            "ask_price": 41.1,
+            "ask_size": 2,
+            "open_price": 38.34,
+            "close_price": null,
+            "high_price": 45.74,
+            "low_price": 14.01,
+            "exchange_volume": 376582,
+            "market_volume": null,
+            "updated_on": "2021-08-23T17:02:29.783Z",
+            "source": "bats_delayed",
+            "security": {
+                "id": "sec_2zvNzA",
+                "ticker": "AA",
+                "exchange_ticker": "AA:UN",
+                "figi": "BBG00B3T3HK5",
+                "composite_figi": "BBG00B3T3HD3"
+            }
+        },
+        {
+            "last_price": 0.4635,
+            "last_time": "2019-10-25T17:24:53.463Z",
+            "last_size": null,
+            "bid_price": 0.465,
+            "bid_size": 900,
+            "ask_price": 0.47,
+            "ask_size": 100,
+            "open_price": null,
+            "close_price": null,
+            "high_price": null,
+            "low_price": null,
+            "exchange_volume": null,
+            "market_volume": null,
+            "updated_on": "2019-10-30T20:28:54.221Z",
+            "source": "iex",
+            "security": {
+                "id": "sec_NgYGzd",
+                "ticker": "AAC",
+                "exchange_ticker": "AAC:UN",
+                "figi": "BBG006T1NZ63",
+                "composite_figi": "BBG006T1NZ18"
+            }
+        }
+    ],
+    "stock_exchange": {
+        "id": "sxg_ozMr9y",
+        "name": "US COMPOSITE",
+        "mic": "USCOMP",
+        "acronym": "USCOMP",
+        "city": null,
+        "country": "UNITED STATES OF AMERICA",
+        "country_code": "US",
+        "website": null,
+        "first_stock_price_date": "1962-01-02",
+        "last_stock_price_date": "2019-08-19"
+    },
+    "next_page": "NXxpZXg="
+}
