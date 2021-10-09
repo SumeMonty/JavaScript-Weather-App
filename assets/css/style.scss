@@ -1,18 +1,61 @@
+// :root{
+//   --dark-body-bg-color:#000000;
+//   --dark-card-bg-color:#000000d0;
+//   --dark-card-color:#fff;
+//   --dark-thermometer-bg-color:#fff;
+//   --dark-search-bg:#7c7c7c2b;
+//   --dark-search-color:#fff;
+  
+//   --light-body-bg-color:#ffffff;
+//   --light-card-bg-color:#fff;
+//   --light-card-color:#000000d0;
+//   --light-thermometer-bg-color:#fff;
+  // --light-search-bg:#7c7c7c2b;
+//   --light-search-color:#fff;
+//   }
+//   .dark{
+//     --body-bg-color:var(--dark-body-bg-color);
+//     --card1-bg-color:var(--dark-card-bg-color);
+//     --card1-color:var(--dark-card-color);
+//     --thermometer-bg-color:var(--dark-thermometer-bg-color);
+//     --search-bg:var(--dark-search-bg);
+//     --search-color:var(--dark-search-color);
+//   }
+//   .light{
+//     --body-bg-color:var(--light-body-bg-color);
+//   }
+  
+
 /****************************BODY STYLES*****************************/
 @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:regular,italic,700,700italic);
 $bodybg: url("https://source.unsplash.com/1600x900/?weather");
 
 body {
+  margin: 0;
+  // width: 100vw; 
+  overflow-x: hidden;
+  // overflow: hidden;
+  font-family: "Ubuntu", sans-serif;
+  background: #222;
+  // background-image: $bodybg;
+  font-size: 120%;
+}
+
+.homePage{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  overflow: auto;
-  font-family: "Ubuntu", sans-serif;
-  background: #222;
   background-image: $bodybg;
-  font-size: 120%;
+  height: 100vh;
+  width: 100vw;
 }
+.forecastPage{
+  background-image: $bodybg;
+  height: 100vh;
+  width: 100vw;
+}
+
+
 
 body {
   -webkit-transition: background-image 0.2s ease-in-out;
@@ -150,13 +193,9 @@ body {
 
 /****************************THERMOMETER STYLES END*****************************/
 
-@media (min-width: 1070px) {
-  body {
-    height: 100vh;
-  }
-}
+
 @media (max-width: 1070px) {
-  body {
+  .homePagePage {
     flex-direction: column;
   }
 }
