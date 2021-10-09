@@ -1,0 +1,69 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Chart.js Sample Chart</title>
+
+</head>
+
+<body>
+    <center>
+        <div class="container">
+            <canvas id="myChart"></canvas>
+            <div class="div-btn">
+                <button id="btn-bar" class="btn-bar btn btn-info">Bar
+                    Chart</button><br>
+
+                <button id="btn-line" class="btn-line btn btn-success">Line
+                    Chart</button>
+                <a href="../index.html">
+                    <button id="btn-home" class="btn-home btn btn-danger">Back To Home</button><br>
+                </a>
+            </div>
+        </div>
+    </center>
+
+
+    <script type="module" src="../assets/js/script.js" defer></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+<!-- For Pie Chart
+
+<button id="btn-pie" class="btn-pie btn btn-success"
+    style="margin-top: 15px;margin-left: 15px;padding-right:  18px;">Pie
+    Chart</button><br>
+
+document.getElementById('btn-pie').onclick = function () {
+myChart.destroy();
+// myChart = new Chart(context, {
+// type: 'bar',
+// data: chartData
+// });
+config = {
+type: 'pie',
+data: chartData,
+options: options
+};
+window.myChart = new Chart(context, config);
+}; -->
