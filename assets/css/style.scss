@@ -5,12 +5,11 @@
 //   --dark-thermometer-bg-color:#fff;
 //   --dark-search-bg:#7c7c7c2b;
 //   --dark-search-color:#fff;
-  
 //   --light-body-bg-color:#ffffff;
 //   --light-card-bg-color:#fff;
 //   --light-card-color:#000000d0;
 //   --light-thermometer-bg-color:#fff;
-  // --light-search-bg:#7c7c7c2b;
+// --light-search-bg:#7c7c7c2b;
 //   --light-search-color:#fff;
 //   }
 //   .dark{
@@ -24,151 +23,147 @@
 //   .light{
 //     --body-bg-color:var(--light-body-bg-color);
 //   }
-  
 
 /****************************BODY STYLES*****************************/
+
 @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:regular,italic,700,700italic);
 $bodybg: url("https://source.unsplash.com/1600x900/?weather");
+body {
+    margin: 0;
+    // width: 100vw; 
+    overflow-x: hidden;
+    // overflow: hidden;
+    font-family: "Ubuntu", sans-serif;
+    background: #222;
+    // background-image: $bodybg;
+    font-size: 120%;
+}
+
+.homePage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: $bodybg;
+    height: 100vh;
+    width: 100vw;
+}
+
+.forecastPage {
+    background-image: $bodybg;
+    height: 100vh;
+    width: 100vw;
+}
 
 body {
-  margin: 0;
-  // width: 100vw; 
-  overflow-x: hidden;
-  // overflow: hidden;
-  font-family: "Ubuntu", sans-serif;
-  background: #222;
-  // background-image: $bodybg;
-  font-size: 120%;
-}
-
-.homePage{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: $bodybg;
-  height: 100vh;
-  width: 100vw;
-}
-.forecastPage{
-  background-image: $bodybg;
-  height: 100vh;
-  width: 100vw;
+    -webkit-transition: background-image 0.2s ease-in-out;
+    transition: background-image 0.2s ease-in-out;
 }
 
 
-
-body {
-  -webkit-transition: background-image 0.2s ease-in-out;
-  transition: background-image 0.2s ease-in-out;
-}
 /****************************BODY STYLES END*****************************/
+
 
 /****************************CENTER CARD1 STYLES*****************************/
 
 .card1 {
-  position: absolute;
-  background: #000000d0;
-  color: white;
-  padding: 32px;
-  border-radius: 30px;
-  width: 80%;
-  max-width: 420px;
-  transition:position 0.4s ease-in-out;
-  margin: 16px;
+    position: absolute;
+    background: #000000d0;
+    color: white;
+    padding: 32px;
+    border-radius: 30px;
+    width: 80%;
+    max-width: 420px;
+    transition: position 0.4s ease-in-out;
+    margin: 16px;
 }
 
+
 /****************************CENTER CARD1 STYLES END*****************************/
+
+
 /****************************CENTER CARD2 STYLES*****************************/
 
 .card2 {
-  background: #000000d0;
-  color: white;
-  padding: 32px;
-  border-radius: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 295px;
-  // width: 490px;
-  width: 80%;
-  max-width: 420px;
-  margin: 16px;
-  transition:visibility 0.4s ease-in-out;
-  visibility:hidden;
+    background: #000000d0;
+    color: white;
+    padding: 32px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 295px;
+    // width: 490px;
+    width: 80%;
+    max-width: 420px;
+    margin: 16px;
+    transition: visibility 0.4s ease-in-out;
+    visibility: hidden;
 }
+
 
 /****************************THERMOMETER STYLES*****************************/
 
 .card2 .thermometer {
-  // background: rgb(255, 0, 0);
-  position: relative;
-  height: 100%;
-  width: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // left: 170px;
-  bottom: 10px;
+    // background: rgb(255, 0, 0);
+    position: relative;
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // left: 170px;
+    bottom: 10px;
 }
 
 .bar {
-  z-index: 1;
-  position: absolute;
-  background-color: #fff;
-  height: 220px;
-  width: 30px;
-  top: 5px;
-  left: 50%;
-  border-radius: 25px 25px 0 0;
-  transform: translateX(-50%);
+    z-index: 1;
+    position: absolute;
+    background-color: #fff;
+    height: 220px;
+    width: 30px;
+    top: 5px;
+    left: 50%;
+    border-radius: 25px 25px 0 0;
+    transform: translateX(-50%);
 }
 
 .circle {
-  background-color: #fff;
-  position: absolute;
-  height: 80px;
-  width: 80px;
-  bottom: 0;
-  border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    bottom: 0;
+    border-radius: 50%;
 }
 
 .circle::after {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 55px;
-  width: 55px;
-  border-radius: 50%;
-  left: 50%;
-  top: 50%;
-  background-color: #ff0000;
-  transform: translate(-50%, -50%);
+    content: "";
+    display: block;
+    position: absolute;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    background-color: #ff0000;
+    transform: translate(-50%, -50%);
 }
-
-// .circle.red::after{
-//   background-color: rgb(255, 0, 0);
-// }
-// .circle.blue::after{
-//   background-color: rgb(0, 0, 255);
-// }
-// .circle.green::after{
-//   background-color: rgb(0,255,0);
-// }
 
 .bar::after {
-  content: "";
-  display: block;
-  height: 80%;
-  width: 16px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -22px;
-  border-radius: 10px 10px 0 0;
-  background-color: #ff0000;
-  animation: anim 2s linear infinite;
-  animation-iteration-count: 2;
+    content: "";
+    display: block;
+    height: 80%;
+    width: 16px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -22px;
+    border-radius: 10px 10px 0 0;
+    background-color: #ff0000;
+    animation: anim 2s linear infinite;
+    animation-iteration-count: 2;
 }
+
 // .bar.red::after{
 //   background-color: rgb(255, 0, 0);
 // }
@@ -179,121 +174,142 @@ body {
 //   background-color: rgb(0,255,0);
 // }
 .todayhigh {
-  position: relative;
-  top: -25%;
-  left: -30%;
-  margin-right:10% ;
+    position: relative;
+    top: -25%;
+    left: -30%;
+    margin-right: 10%;
 }
+
 .todaylow {
-  position: relative;
-  top: 12%;
-  left: 30%;
-  margin-left:55% ;
+    position: relative;
+    top: 12%;
+    left: 30%;
+    margin-left: 55%;
 }
+
 
 /****************************THERMOMETER STYLES END*****************************/
 
-
 @media (max-width: 1070px) {
-  .homePagePage {
-    flex-direction: column;
-  }
+    .homePagePage {
+        flex-direction: column;
+    }
 }
-@media (max-width:430px) {
-  .todayhigh {
-    margin-right:10%;
-  }
-  .todaylow {
 
-    margin-left:55% ;
-  }
+@media (max-width:430px) {
+    .todayhigh {
+        margin-right: 10%;
+    }
+    .todaylow {
+        margin-left: 55%;
+    }
 }
+
 
 /****************************CENTER CARD2 STYLES END*****************************/
+
 
 /****************************WEATHER SEARCH AREA STYLES*****************************/
 
 .search {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 button {
-  margin: 0.5em;
-  border-radius: 50%;
-  border: none;
-  height: 44px;
-  width: 44px;
-  outline: none;
-  background: #7c7c7c2b;
-  color: #fff;
-  cursor: pointer;
-  transition: 0.2s ease-in-out;
+    margin: 0.5em;
+    border-radius: 50%;
+    border: none;
+    height: 44px;
+    width: 44px;
+    outline: none;
+    background: #7c7c7c2b;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
 }
 
 input.search-bar {
-  border: none;
-  outline: none;
-  padding: 0.4em 1em;
-  border-radius: 24px;
-  background: #7c7c7c2b;
-  color: #fff;
-  font-family: inherit;
-  font-size: 105%;
-  width: calc(100% - 100px);
+    border: none;
+    outline: none;
+    padding: 0.4em 1em;
+    border-radius: 24px;
+    background: #7c7c7c2b;
+    color: #fff;
+    font-family: inherit;
+    font-size: 105%;
+    width: calc(100% - 100px);
 }
 
 button:hover {
-  background: #7c7c7c6b;
+    background: #7c7c7c6b;
 }
+
+
 /****************************WEATHER SEARCH AREA STYLES END*****************************/
 
+
 /****************************TEMP AREA STYLES*****************************/
+
 h1.temp {
-  margin: 0;
-  margin-bottom: 0.4em;
-  cursor: pointer;
+    margin: 0;
+    margin-bottom: 0.4em;
+    cursor: pointer;
 }
 
 h1.temp:hover {
-  color: #a8a7a7;
+    color: #a8a7a7;
 }
+
+
 /****************************TEMP AREA STYLES END*****************************/
 
+
 /****************************WEATHER DESCRIPTION STYLES*****************************/
+
 .flex {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .description {
-  text-transform: capitalize;
-  margin-left: 8px;
+    text-transform: capitalize;
+    margin-left: 8px;
 }
+
+
 /****************************WEATHER DESCRIPTION STYLES END*****************************/
 
+
 /****************************WEATHER CONTAINER STYLES*****************************/
+
 .weather.loading {
-  visibility: hidden;
-  max-height: 20px;
-  position: relative;
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
 }
 
 .weather.loading:after {
-  visibility: visible;
-  content: "Please Search For A Location";
-  color: white;
-  position: absolute;
-  top: 0;
-  left: 20px;
+    visibility: visible;
+    content: "Please Search For A Location";
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 20px;
 }
+
+
 /****************************WEATHER CONTAINER STYLES END*****************************/
 
+
 /****************************MEDIA QUERIES*****************************/
+
 @media (max-width: 395px) {
-  .weather.loading:after {
-    top: -12px;
-  }
+    .weather.loading:after {
+        top: -12px;
+    }
 }
+
+
 /****************************MEDIA QUERIES*****************************/
