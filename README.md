@@ -16,6 +16,14 @@ https://user-images.githubusercontent.com/80830020/135454678-ba703300-fd54-4b7c-
 
 ---
 
+<a href="https://github.com/SumeMonty/JavaScript-Weather-App/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=SumeMonty/JavaScript-Weather-App" />
+</a>
+
+Made with [contributors-img](https://contrib.rocks).
+
+---
+
 ## :tickets: License
 
 [MIT](LICENSE)
