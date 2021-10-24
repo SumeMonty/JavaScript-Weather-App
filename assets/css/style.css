@@ -47,6 +47,12 @@ body {
   -webkit-transition: position 0.4s ease-in-out;
   transition: position 0.4s ease-in-out;
   margin: 16px;
+  /**********/
+  backdrop-filter: blur(6px) saturate(200%);
+  -webkit-backdrop-filter: blur(6px) saturate(200%);
+  background-color: rgba(0, 0, 0, 0.68);
+  border-radius: 18px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
 }
 
 /****************************CENTER CARD1 STYLES END*****************************/
@@ -65,6 +71,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-height: 295px;
   height: 295px;
   width: 80%;
   max-width: 420px;
@@ -72,6 +79,11 @@ body {
   -webkit-transition: visibility 0.4s ease-in-out;
   transition: visibility 0.4s ease-in-out;
   visibility: hidden;
+  backdrop-filter: blur(6px) saturate(200%);
+  -webkit-backdrop-filter: blur(6px) saturate(200%);
+  background-color: rgba(0, 0, 0, 0.68);
+  border-radius: 18px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
 }
 
 /****************************THERMOMETER STYLES*****************************/
@@ -161,7 +173,7 @@ body {
 
 /****************************THERMOMETER STYLES END*****************************/
 @media (max-width: 1070px) {
-  .homePagePage {
+  .homePage {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -227,11 +239,16 @@ button:hover {
 h1.temp {
   margin: 0;
   margin-bottom: 0.4em;
-  cursor: pointer;
 }
 
-h1.temp:hover {
+h1.temp span:nth-of-type(2) {
   color: #a8a7a7;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+h1.temp span:nth-of-type(2):hover {
+  color: #fff;
 }
 
 /****************************TEMP AREA STYLES END*****************************/

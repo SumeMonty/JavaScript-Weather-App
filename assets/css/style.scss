@@ -75,6 +75,12 @@ body {
     max-width: 420px;
     transition: position 0.4s ease-in-out;
     margin: 16px;
+    /**********/
+    backdrop-filter: blur(6px) saturate(200%);
+    -webkit-backdrop-filter: blur(6px) saturate(200%);
+    background-color: rgba(0, 0, 0, 0.68);
+    border-radius: 18px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
 }
 
 
@@ -91,6 +97,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 295px;
     height: 295px;
     // width: 490px;
     width: 80%;
@@ -98,6 +105,12 @@ body {
     margin: 16px;
     transition: visibility 0.4s ease-in-out;
     visibility: hidden;
+
+    backdrop-filter: blur(6px) saturate(200%);
+    -webkit-backdrop-filter: blur(6px) saturate(200%);
+    background-color: rgba(0, 0, 0, 0.68);
+    border-radius: 18px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
 }
 
 
@@ -191,7 +204,7 @@ body {
 /****************************THERMOMETER STYLES END*****************************/
 
 @media (max-width: 1070px) {
-    .homePagePage {
+    .homePage {
         flex-direction: column;
     }
 }
@@ -255,11 +268,16 @@ button:hover {
 h1.temp {
     margin: 0;
     margin-bottom: 0.4em;
+    
+}
+h1.temp span:nth-of-type(2){
+    color: #a8a7a7;
     cursor: pointer;
+    font-size: 20px;
 }
 
-h1.temp:hover {
-    color: #a8a7a7;
+h1.temp span:nth-of-type(2):hover {
+    color:#fff;
 }
 
 
