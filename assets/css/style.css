@@ -246,6 +246,16 @@ h1.temp span:nth-of-type(2) {
   color: #a8a7a7;
   cursor: pointer;
   font-size: 20px;
+  user-select: none;
+  /* supported by Chrome and Opera */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
 }
 
 h1.temp span:nth-of-type(2):hover {
