@@ -180,13 +180,9 @@ body {
             flex-direction: column;
   }
   .card1 {
+    position: -webkit-sticky;
+    position: sticky;
     margin-top: 120px;
-  }
-}
-
-@media (max-height: 570px) {
-  .card1 {
-    margin-top: 180px;
   }
 }
 
